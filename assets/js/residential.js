@@ -3,18 +3,18 @@
 ////////////////////////////////////////////////////////////////
 
 // Set a constant threshold for agent ratings
-var AGENT_RATING = 95;
+const  AGENT_RATING = 95;
 
 // Initialize an array to store agent data
-var agentData = [];
+const agentData = [];
 
 // Define the API endpoint for fetching agents list
-var AGENTS_LIST_URL = "";
+const AGENTS_LIST_URL = "http://99.79.77.144:3000/api/agents";
 
 // Get references to HTML elements for table head, table body, and region type select
-var AGENT_TABLE_HEAD = document.getElementById('');
-var AGENT_TABLE_BODY = document.getElementById('');
-var REGION_TYPE_SELECT = document.getElementById('');
+const AGENT_TABLE_HEAD = document.getElementById("");
+let AGENT_TABLE_BODY = document.getElementById("");
+let REGION_TYPE_SELECT = document.getElementById("");
 
 // Get references to all buttons in the table head
 var tableButtons = document.querySelectorAll('th button');
@@ -25,7 +25,7 @@ var tableButtons = document.querySelectorAll('th button');
 
 // Function to render the table body based on agent ratings and selected region
 function renderBodyTable() {
-  AGENT_TABLE_BODY.innerHTML = '';
+  AGENT_TABLE_BODY.innerHTML = 'http://99.79.77.144:3000/api/agents';
   AGENT_TABLE_HEAD.style.backgroundColor = '#A94545';
   var rowNumber = 1;
 

@@ -90,7 +90,28 @@ tableButtons.forEach((button) => {
 
 // On window load, fetch agent data and render the table for all regions
 window.onload = async () => {
+  // Existing functionality: Fetch agent data and render table
   var RESPONSE = await fetch(AGENTS_LIST_URL);
   agentData = await RESPONSE.json();
-  renderBodyTable(agentData, 'all');
+  renderBodyTable(agentData, "all");
+
+  // Scroll to top functionality
+  var toTop = document.getElementById("toTop");
+
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      toTop.style.display = "block";
+    } else {
+      toTop.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top when the button is clicked
+  toTop.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 };

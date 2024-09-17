@@ -29,7 +29,7 @@
   <link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
 
   <!-- ROCKET THEME CSS-->
-  <link href="./assets/rocket-theme.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/rocket-theme.css" rel="stylesheet" type="text/css" />
 
   <!-- PAGE LEVEL SCRIPTS -->
   <link href="./assets/css/header-1.css" rel="stylesheet" type="text/css" />
@@ -43,70 +43,60 @@
 
 <body class="smoothscroll enable-animation">
 
-  <!-- WRAPPER -->
-  <div id="">
-
-    <!-- HEADER -->
-    <div id="" class="navbar-toggleable-md sticky header-md clearfix">
-      <div id="topNav">
-        <div class="container">
-          <!-- Mobile Menu Button -->
-          <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
-          <!-- Logo -->
-          <a class="logo float-left scrollTo" href="#wrapper">
-            <img src="./images/rocketLog.png" alt="" />
-          </a>
-          <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-            <nav class="nav-main">
-              <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-                <li class="active">
-                  <!-- HOME -->
-                  <a href="#topNav"> HOME </a>
-                </li>
-                <li class="dropdown">
-                  <!-- SERVICES -->
-                  <a class="dropdown-toggle" href="index.html#portfolio">
-                    SERVICES
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown">
-                      <a class="dropdown-toggle" href="commercial.html">
-                        RESIDENTIAL SERVICES
-                      </a>
-                      <a class="dropdown-toggle" href="quote.html">
-                        COMMERCIAL SERVICES
-                      </a>
-                      <a class="dropdown-toggle" href="residential.html">
-                        REQUEST A QUOTE
-                      </a>
-                    </li>
-                  </ul>
+  <header id="header" class="navbar-expand-md sticky header-md clearfix">
+    <div id="topNav">
+      <div class="">
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Logo -->
+        <a class="logo float-left scrollTo" href="#wrapper">
+          <img src="./assets/images/rocketLogo.png" alt="" style="height:40px; width: 80px;" />
+        </a>
+        <!-- Navbar Links -->
+        <nav class="nav-main">
+          <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+            <li class="active">
+              <!-- HOME -->
+              <a href="topNav.html">HOME</a>
+            </li>
+            <li class="dropdown">
+              <!-- SERVICES -->
+              <a class="dropdown-toggle" href="#">SERVICES</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="quote.html">RESIDENTIAL SERVICES</a>
                 </li>
                 <li>
-                  <!-- PORTFOLIO -->
-                  <a href="#portfolio"> PORTFOLIO </a>
+                  <a href="residential.html">COMMERCIAL SERVICES</a>
                 </li>
                 <li>
-                  <!-- NEWS -->
-                  <a href="#news"> NEWS </a>
-                </li>
-                <li>
-                  <!-- CLIENTS -->
-                  <a href="#clients"> CLIENTS </a>
-                </li>
-                <li>
-                  <!-- CONTACT -->
-                  <a href="#contact"> CONTACT </a>
+                  <a href="commercial.html">REQUEST A QUOTE</a>
                 </li>
               </ul>
-            </nav>
-          </div>
-        </div>
+            </li>
+            <li>
+              <!-- PORTFOLIO -->
+              <a href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li>
+              <!-- NEWS -->
+              <a href="#news">NEWS</a>
+            </li>
+            <li>
+              <!-- CLIENTS -->
+              <a href="#clients">CLIENTS</a>
+            </li>
+            <li>
+              <!-- CONTACT -->
+              <a href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <!-- /HEADER -->
+  </header>
 
     <!-- PARALLAX SECTION -->
     <div class="parallax parallax-2" style="background-image: url('./images/homeSlider1.jpeg');">

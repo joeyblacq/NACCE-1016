@@ -1,10 +1,10 @@
 #topMain>li>a {
-	height:96px;
-	line-height:96px;
+	height:10px;
+	line-height:10px;
 }
 #topMain.nav-pills>li>a {
 	color:#1F262D;
-	font-weight:400;
+	font-weight:100;
 	background-color:transparent;
 } 
 #topMain.nav-pills>li:hover>a, 

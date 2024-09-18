@@ -48,7 +48,7 @@
 <body class="smoothscroll enable-animation">
 
   <!-- SCROLL TO TOP -->
-  <a href="" id="toTop"></a>
+  <a href="#" id="toTop"></a>
   <!-- /SCROLL TO TOP -->
 
   <!-- WRAPPER -->
@@ -56,44 +56,36 @@
   <div id="wrapper">
 
     <!-- HEADER -->
-
-    <header id="header" class="navbar-toggleable-md sticky header-md clearfix">
-      <div id="topNav">
+    <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+      <header id="topNav">
         <div class="container">
-
           <!-- Mobile Menu Button -->
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".nav-main-collapse">
-            <i class="fa fa-bars"></i> <!-- <span class="navbar-toggler-icon"></span> -->
+          <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+            <i class="fa fa-bars"></i>
           </button>
           <!-- Logo -->
           <a class="logo float-left scrollTo" href="#wrapper">
-            <img src="./assets/images/rocketLogo.png" alt="compamy logo" style=" height:40px; width: 90px;" />
+            <img src="assets/images/rocketLogo.png" alt="" />
           </a>
-
-          <!-- Navbar Links -->-
-
           <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-
             <nav class="nav-main">
               <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                 <li class="active">
-
                   <!-- HOME -->
-                  <a href="topNav.html"> HOME </a>
+                  <a href="index.html"> HOME </a>
                 </li>
                 <li class="dropdown">
                   <!-- SERVICES -->
-                  <a class="dropdown-toggle" href="#news"> SERVICES </a>
+                  <a class="dropdown-toggle" href="#services"> SERVICES </a>
                   <ul class="dropdown-menu">
                     <li class="dropdown">
-                      <a class="dropdown-toggle" href="#quote.html">
+                      <a class="dropdown-toggle" href="residential.html">
                         RESIDENTIAL SERVICES
                       </a>
-                      <a class="dropdown-toggle" href="residential.html">
+                      <a class="dropdown-toggle" href="commercial.html">
                         COMMERCIAL SERVICES
                       </a>
-                      <a class="dropdown-toggle" href="commercial.html">
+                      <a class="dropdown-toggle" href="quote.html">
                         REQUEST A QUOTE
                       </a>
                     </li>
@@ -101,7 +93,7 @@
                 </li>
                 <li>
                   <!-- PORTFOLIO -->
-                  <a href="#portfolio"> featured work </a>
+                  <a href="#portfolio"> PORTFOLIO </a>
                 </li>
                 <li>
                   <!-- NEWS -->
@@ -113,16 +105,14 @@
                 </li>
                 <li>
                   <!-- CONTACT -->
-                  <a href="#contact"> CONTACT </a>
+                  <a href="commercial.html#contact"> CONTACT </a>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
-      </div>
-    </header>
-
-
+      </header>
+    </div>
     <!-- /HEADER -->
 
     <!-- BUTTON CALLOUT -->
@@ -356,7 +346,7 @@
         <div class="row">
           <div class="col-sm-4">
             <a class="image-hover lightbox" href="#portfolio">
-              <img class="img-fluid" src="./images/resPortfolio3.jpeg" alt="img" />
+              <img class="img-fluid" src="./assets/images/comPortfolio2.jpeg" alt="img" />
             </a>
 
             <h3 onmouseover="this.style.color= '#A94545'" onmouseout="this.style.color= '#000000'" class="mt-10">
@@ -370,7 +360,7 @@
 
           <div class="col-sm-4">
             <a class="image-hover lightbox" href="#">
-              <img class="img-fluid" src="./images/c3.jpg" alt="img" />
+              <img class="img-fluid" src="./assets/images/comPortfolio9.jpeg" alt="img" />
             </a>
             <h3 onmouseover="this.style.color= '#A94545'" onmouseout="this.style.color= '#000000'" class="mt-10">
               Residential Projects
@@ -383,7 +373,7 @@
 
           <div class="col-sm-4">
             <a class="image-hover lightbox" href="">
-              <img class="img-fluid" src="./images/resPortfolio6.jpeg" alt="img" />
+              <img class="img-fluid" src="./assets/images/comPortfolio1.jpeg" alt="img" />
             </a>
             <h3 onmouseover="this.style.color= '#A94545'" onmouseout="this.style.color= '#000000'" class="mt-10">
               Commercial Projects
@@ -407,7 +397,7 @@
           data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
           <div class="testimonial">
             <figure>
-              <img class="rounded" src="./images/11-min.jpg" alt="" />
+              <img class="rounded" src="./assets/images/11-min.jpg" alt="" />
             </figure>
             <div class="testimonial-content p-0">
               <p style="font-family: 'Roboto Slab', serif" class="lead">
@@ -440,7 +430,7 @@
 
     <!--FEATURED WORK  -->
 
-    <div id="Featured work">
+    <section id="Portfolio">
 
       <div class="container">
         <div class="heading-title heading-dotted text-center">
@@ -450,16 +440,16 @@
         <div class="text-center">
           <ul class="nav nav-pills mix-filter mb-60">
             <li data-filter="all" class="filter active">
-              <a href="#">All</a>
+              <a href="#portfolio">All</a>
             </li>
             <li data-filter="residential" class="filter">
-              <a href="#">Residential</a>
+              <a href="#portfolio">Residential</a>
             </li>
             <li data-filter="commercial" class="filter">
-              <a href="#">Commercial</a>
+              <a href="#portfolio">Commercial</a>
             </li>
             <li data-filter="awards" class="filter">
-              <a href="#">Awards</a>
+              <a href="#portfolio">Awards</a>
             </li>
           </ul>
         </div>
@@ -475,7 +465,7 @@
                   <span class="overlay dark-5"></span>
                 </span>
 
-                <img class="img-fluid" src="./images/news6.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/comPortfolio8.jpg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -498,7 +488,7 @@
                 <span class="item-hover">
                   <span class="overlay dark-5"></span>
                 </span>
-                <img class="img-fluid" src="./images/image 5.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/comPortfolio7.jpeg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -523,7 +513,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/c3.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/comPortfolio5.jpeg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -549,7 +539,7 @@
                 </span>
 
                 <img class="img-fluid"
-                  src="./images/Industiral-Flash-Storage-for-Elevator-Control-Applications-scaled.jpg"
+                  src="./assets/images/comPortfolio3.jpeg"
                   style="width: 500px; height: 275px" alt="" />
               </figure>
 
@@ -574,7 +564,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/98f2c995-caac-486c-9495-42dc7a0b7560_29ad50aa.jpg"
+                <img class="img-fluid" src="./assets/images/award5.jpg"
                   style="width: 500px; height: 275px" alt="" />
               </figure>
 
@@ -599,7 +589,7 @@
                 </span>
 
                 <img class="img-fluid"
-                  src="./images/3d-rendering-modern-steel-elevator-lift-lobby-business-hotel-with-luxury-design_105762-2030.jpg.avif"
+                  src="./assets/images/award6.png"
                   style="width: 500px; height: 275px" alt="" />
               </figure>
 
@@ -623,7 +613,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/c1.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/AdobeStock_41696502.jpeg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -646,7 +636,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/resPortfolio7.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/Industiral-Flash-Storage-for-Elevator-Control-Applications-scaled.jpg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -669,7 +659,7 @@
                   <span class="overlay dark-5"></span>
                 </span>
 
-                <img class="img-fluid" src="./images/c2.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/award4.jpeg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -692,7 +682,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/resPortfolio9.jpg" style="width: 500px; height: 275px" alt="" />
+                <img class="img-fluid" src="./assets/images/award3.jpeg" style="width: 500px; height: 275px" alt="" />
               </figure>
 
               <div class="item-box-desc">
@@ -715,7 +705,7 @@
                   <span class="inner"> </span>
                 </span>
 
-                <img class="img-fluid" src="./images/AdobeStock_4169650.jpeg" style="width: 500px; height: 275px"
+                <img class="img-fluid" src="./assets/images/award2.png" style="width: 500px; height: 275px"
                   alt="" />
               </figure>
 
@@ -742,7 +732,7 @@
                 </span>
 
                 <img class="img-fluid"
-                  src="./images/5e9565a36fafae00fa23707a1f7ac2c9-uncropped_scaled_within_1536_1152.webp"
+                  src="./assets/images/award1.png"
                   style="width: 500px; height: 275px" alt="" />
               </figure>
 
@@ -759,12 +749,12 @@
           <!-- /item -->
         </div>
       </div>
-    </div>
+    </section>
     <!-- /FEATURED WORK -->
 
     <!-- RECENT NEWS  -->
 
-    <section id="recent news">
+    <section id="news">
       <div class="container">
         <div class="heading-title heading-dotted text-center">
           <h2> recent news</h2>
@@ -775,7 +765,7 @@
           <div class="img-hover">
             <a href="https://www.facilitiesnet.com/elevators/article/Understanding-Proposed-Changes-to-NYC-Elevator-Code--19432"
               target="_blank">
-              <img class="img-fluid" src="./images/news9.jpeg" alt="" />
+              <img class="img-fluid" src="./assets/images/news1.jpg" alt="" />
             </a>
 
             <h4 class="text-left mt-20">
@@ -796,7 +786,7 @@
           <div class="img-hover">
             <a href="https://www.axios.com/2023/01/04/artificial-intelligence-facial-recognition-elevators-otis-schindler-horizontal"
               target="_blank">
-              <img class="img-fluid" src="./images/news8.webp" alt="" />
+              <img class="img-fluid" src="./assets/images/news10.jpeg" alt="" />
             </a>
 
             <h4 class="text-left mt-20">
@@ -817,7 +807,7 @@
           <div class="img-hover">
             <a href="https://www.openpr.com/news/2897480/home-elevators-market-sets-the-table-for-continued-growth"
               target="_blank">
-              <img class="img-fluid" src="./images/news.jpeg" alt="" />
+              <img class="img-fluid" src="./assets/images/news3.jpg" alt="" />
             </a>
 
             <h4 class="text-left mt-20">
@@ -838,7 +828,7 @@
           <div class="img-hover">
             <a href="https://blockclubchicago.org/2023/01/23/avondales-belmont-blue-line-station-to-get-elevator-other-long-overdue-accessibility-upgrades/#:~:text=Overdue'%20Accessibility%20Upgrades-,Avondale's%20Belmont%20Blue%20Line%20Station%20To%20Get%20Elevator%2C%20Other%20'Long,upgrades%20thanks%20to%20federal%20funding."
               target="_blank">
-              <img class="img-fluid" src="./images/news11.webp" alt="" />
+              <img class="img-fluid" src="./assets/images/news9.jpeg" alt="" />
             </a>
 
             <h4 class="text-left mt-20">
@@ -859,7 +849,7 @@
           <div class="img-hover">
             <a href="https://ktvo.com/news/local/backordered-parts-for-adair-county-courthouse-elevator-causing-reopening-delay"
               target="_blank">
-              <img class="img-fluid" src="./images/news5.jpg" alt="" />
+              <img class="img-fluid" src="./assets/images/news8.webp" alt="" />
             </a>
             <h4 class="text-left mt-20">
               <a href="https://ktvo.com/news/local/backordered-parts-for-adair-county-courthouse-elevator-causing-reopening-delay"
@@ -881,7 +871,7 @@
           <div class="img-hover">
             <a href="https://www.globenewswire.com/news-release/2023/01/20/2592586/0/en/Global-Warehouse-Freight-Elevators-Market-Research-Report-2022-2032.html"
               target="_blank">
-              <img class="img-fluid" src="./images/comPortfolio6.jpeg" alt="" />
+              <img class="img-fluid" src="./assets/images/news6.jpg" alt="" />
             </a>
             <h4 class="text-left mt-20">
               <a href="https://www.globenewswire.com/news-release/2023/01/20/2592586/0/en/Global-Warehouse-Freight-Elevators-Market-Research-Report-2022-2032.html"
@@ -902,7 +892,7 @@
           </div>
           <div class="img-hover">
             <a href="https://www.kalealifts.com/blog/how-elevators-have-changed-the-world" target="_blank">
-              <img class="img-fluid" src="./images/news6.jpg" alt="" />
+              <img class="img-fluid" src="./assets/images/news5.jpg" alt="" />
             </a>
             <h4 class="text-left mt-20">
               <a href="https://www.kalealifts.com/blog/how-elevators-have-changed-the-world" target="_blank">How
@@ -922,7 +912,7 @@
           </div>
           <div class="img-hover">
             <a href="https://blog.ansi.org/history-of-elevators/" target="_blank">
-              <img class="img-fluid" src="./images/resBaner.jpeg" alt="" />
+              <img class="img-fluid" src="./assets/images/news4.jpg" alt="" />
             </a>
             <h4 class="text-left mt-20">
               <a href="https://blog.ansi.org/history-of-elevators/" target="_blank">A Brief History of Elevators</a>
@@ -947,7 +937,7 @@
 
     <!--  OUR CLIENTS  -->
 
-    </section id="our clients" class="alternate">
+    <section id="clients" class="alternate">
 
     <div class="container">
       <div class="heading-title heading-dotted text-center">
@@ -958,7 +948,7 @@
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
           <a href="">
-            <img class="img-fluid" src="./images/customer13.png" alt="client" />
+            <img class="img-fluid" src="./assets/images/customer1.png" alt="client" />
           </a>
         </li>
         <!-- /client -->
@@ -966,7 +956,7 @@
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
           <a href="">
-            <img class="img-fluid" src="./images/customer11.png" alt="client" />
+            <img class="img-fluid" src="./assets/images/customer10.png" alt="client" />
           </a>
         </li>
         <!-- /client -->
@@ -974,7 +964,7 @@
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
           <a href="">
-            <img class="img-fluid" src="./images/customer12.png" alt="client" />
+            <img class="img-fluid" src="./assets/images/customer12.png" alt="client" />
           </a>
         </li>
         <!-- /client -->
@@ -982,7 +972,7 @@
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
           <a href="">
-            <img class="img-fluid" src="./images/customer8.png" alt="client" />
+            <img class="img-fluid" src="./assets/images/customer13.png" alt="client" />
           </a>
         </li>
         <!-- /client -->
@@ -990,26 +980,26 @@
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
           <a href="">
-            <img class="img-fluid" src="./images/customer9.png" alt="client" />
+            <img class="img-fluid" src="./assets/images/customer2.png" alt="client" />
           </a>
         </li>
         <!-- /client -->
 
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
-          <img class="img-fluid" src="./images/customer7.png" alt="client" />
+          <img class="img-fluid" src="./assets/images/customer3.png" alt="client" />
         </li>
         <!-- /client -->
 
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
-          <img class="img-fluid" src="./images/customer3.png" alt="client" />
+          <img class="img-fluid" src="./assets/images/customer4.png" alt="client" />
         </li>
         <!-- /client -->
 
         <!-- client -->
         <li class="col-md-3 col-sm-3 col-6">
-          <img class="img-fluid" src="./images/customer.png" alt="client" />
+          <img class="img-fluid" src="./assets/images/customer5.png" alt="client" />
         </li>
         <!-- /client -->
       </ul>
@@ -1019,23 +1009,25 @@
 
     <!-- QUICK OVERVIEWS -->
 
-    <footer id="quick overveiw">
+    <section id="Quick Overveiw">
 
       <div class="container text-center">
         <div class="heading-title heading-dotted text-center">
           <h2>Fast Overview</h2>
         </div>
-        <div class="row text-left">
+       
           <div class="col-sm-8">
-            <img src="./images/comPortfolio2.jpeg" alt="product image" style="height: 350px" />
+            <img src="./assets/images/comPortfolio1.jpeg" alt="product image" style="height: 350px" />
           </div>
-
-          <div class="col-sm-4">
+            <div class="text-left">
+          <div>
+            <br>
+            <br>
             Rocket Elevators, a global mobility leader, prioritizes customers in every project.
             We offer reliable products, proactive communication, and a vast service network.
             Committed to sustainability, we target net carbon zero by 2050,
             providing EPDs to compare elevator carbon footprints.
-            <hr />
+            
 
             <ul class="list-unstyled list-icons">
               <li>
@@ -1049,7 +1041,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </section>
     <!-- / QUICK OVERVIEWS -->
 
     <!-- MODAL SUBSCRIBE DIVISION -->

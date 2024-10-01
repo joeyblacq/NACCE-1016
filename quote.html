@@ -50,7 +50,8 @@
   <div id="wrapper">
 
     <!-- HEADER -->
-    <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+    <div id="table-head-agent" class="navbar-toggleable-md sticky header-md clearfix">
       <div id="topNav">
         <div class="container">
           <!-- Mobile Menu Button -->
@@ -89,19 +90,19 @@
                 </li>
                 <li>
                   <!-- PORTFOLIO -->
-                  <a href="index#portfolio"> PORTFOLIO </a>
+                  <a href="index.html#portfolio"> PORTFOLIO </a>
                 </li>
                 <li>
                   <!-- NEWS -->
-                  <a href="index.html/news"> NEWS </a>
+                  <a href="index.html#news"> NEWS </a>
                 </li>
                 <li>
                   <!-- CLIENTS -->
-                  <a href="index.html/clients"> CLIENTS </a>
+                  <a href="index.html#clients"> CLIENTS </a>
                 </li>
                 <li>
                   <!-- CONTACT -->
-                  <a href="commercial.html/contact"> CONTACT </a>
+                  <a href="commercial.html#contact"> CONTACT </a>
                 </li>
               </ul>
             </nav>
@@ -110,7 +111,9 @@
       </div>
     </div>
     <!-- /HEADER -->
+
 <!-- HEADER BREADCRUMBS SECTION -->
+ 
 <div class="page-header page-header-xs parallax parallax-3" style="
           background-image: url('./images/imgpattern2.jpg');
         ">
@@ -130,7 +133,7 @@
 
     <!--Rocket Elevators Pricing-->
 
-    <div id="pricing section">
+    <section id="pricing">
       <div class="container">
         <header class="text-center mb-60 wow fadeInUp" data-wow-delay="0.5s">
           <div class="heading-title heading-dotted text-center">
@@ -196,17 +199,59 @@
 
 
      <!--Request a Quote -->
+        <!-- TEAM SECTION -->
 
-    <section id="quote">
-      <div class="container text-center mb-60">
-        <h2 style="margin-bottom: 20px;">Request A  Quote</h2>
-        <h3 class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s"></h3>
-          <div class="heading-title heading-dotted text-center"></div>
-           </div>
+    <section id="team">
 
       <div class="container">
+        <div class="owl-carousel text-center owl-testimonial m-0"
+          data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+          <div class="testimonial">
+            <figure>
+              <img class="rounded" src="./assets/images/11-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content p-0">
+              <p style="font-family: 'Roboto Slab', serif" class="lead">
+                Serving our customers and shareholders for 12 years.
+              </p>
+              <cite>
+                Joana Doe
+                <span style="color: #fff">Rocket Elevators CEO</span>
+              </cite>
+            </div>
+          </div>
+          <div class="testimonial">
+            <figure>
+              <img class="rounded" src="./images/12-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content p-0">
+              <p style="font-family: 'Roboto Slab', serif" class="lead">
+                Our lead in sales and customer service.
+              </p>
+              <cite>
+                Melissa Doe
+                <span style="color: #fff">Employee of the Month</span>
+              </cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /TEAM SECTION -->
+     
+  <!-- QUOTE FORM SECTION -->
+    <section id="quote">
+      <div class="container text-center mb-60">
+        <h2 style="margin-bottom: 20px;">Request A Quote</h2>
+        <h3 class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s"></h3>
+        <div class="heading-title heading-dotted text-center"></div>
+      </div>
+    
+      <div class="container">
         <form class="validate" id="quote-form">
+
           <!-- STEP 1 -->
+           
           <div id="step-1" class="select-building-type card card-default">
             <div class="card-heading card-heading-transparent">
               <label class="card-title">
@@ -229,8 +274,9 @@
             </div>
           </div>
           <!-- /STEP 1 -->
-
+    
           <!-- STEP 2 -->
+
           <div id="step 2" class="estimate-num-elv card card-default">
             <div class="card-heading step-description">
               <h3>
@@ -240,7 +286,9 @@
             </div>
             <div class="card-block">
               <div class="row" style="margin: 20px">
+
                 <!-- Division of the input fields for number of apartments -->
+
                 <div id="div-number-of-apartments" class="col-4">
                   <label>
                     <h4>Number of Apartments</h4>
@@ -248,6 +296,7 @@
                   </label>
                 </div>
                 <!-- Division of the input fields for number of floors -->
+                 
                 <div id="div-number-of-floors" class="col-4">
                   <label>
                     <h4>Number of Floors</h4>
@@ -255,6 +304,7 @@
                   </label>
                 </div>
                 <!-- Division of the input fields for number of elevators -->
+
                 <div id="div-amount-elevators-needed" class="col-4">
                   <label>
                     <h4>Number of Elevators</h4>
@@ -262,6 +312,7 @@
                   </label>
                 </div>
                 <!-- Division of the input fields for maximum occupancy -->
+
                 <div id="div-maximum-occupancy" class="col-4">
                   <label>
                     <h4>Maximum Occupancy</h4>
@@ -270,10 +321,13 @@
                 </div>
               </div>
               <div class="row" style="margin: 20px">
+                
                 <!-- Division of the read-only input fields for amount of elevators needed -->
+
                 <div id="div-amount-elevators-needed" class="col-6">
                   <label>
                     <h4 style="margin-bottom: 0">
+                      
                       Number of Elevators Required (Minimum of 1):
                     </h4>
                     <input type="number" class="form-control" readonly />
@@ -335,6 +389,7 @@
           <!-- /STEP 3 -->
 
           <!-- STEP 4 -->
+
           <div id="step 3" class="final-pricing-display card card-default">
             <div class="card-heading card-heading-transparent">
               <h3>
@@ -379,7 +434,7 @@
                       <label>
                         <!-- Read-only input fields for elevator cost -->
 
-                        <input id="elevator-unit-price" type="text" class="form-control" style="
+                        <input id="elevator-total-price" type="text" class="form-control" style="
                               background: none;
                               text-align: center;
                               border: none;
@@ -398,12 +453,12 @@
                     <h4>
                       <label>
                         <!-- Read-only input fields for installation fees -->
-                        <input id="elevator-unit-price" type="text" class="form-control" style="
+                        <input id="installation-fees" type="text" class="form-control" style="
                               background: none;
                               text-align: center;
                               border: none;
                               font-size: x-large;
-                            " readonly />
+                            " readonly  />
                       </label>
                     </h4>
                   </div>
@@ -417,7 +472,8 @@
                     <h4>
                       <label>
                         <!-- Read-only input fields for total cost -->
-                        <input id="total-cost" type="text" class="form-control" style="
+
+                        <input id="div-total-cost" type="text" class="form-control" style="
                               background: none;
                               text-align: center;
                               border: none;

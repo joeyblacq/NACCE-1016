@@ -12,11 +12,13 @@ const agentData = [];
 const AGENTS_LIST_URL = "http://99.79.77.144:3000/api/agents";
 
 // Get references to HTML elements for table head, table body, and region type select
-const AGENT_TABLE_HEAD = document.getElementById("");
-let AGENT_TABLE_BODY = document.getElementById("");
-let REGION_TYPE_SELECT = document.getElementById("");
 
-// Get references to all buttons in the table head
+const AGENT_TABLE_HEAD = document.getElementById("AGENT_TABLE_HEAD");
+let AGENT_TABLE_BODY = document.getElementById("AGENT_TABLE_BODY");
+let REGION_TYPE_SELECT = document.getElementById("REGION_TYPE_SELECT");
+
+// Get references to all buttons in the table head 
+
 var tableButtons = document.querySelectorAll('th button');
 
 ////////////////////////////////////////////////////////////////
@@ -24,30 +26,37 @@ var tableButtons = document.querySelectorAll('th button');
 ////////////////////////////////////////////////////////////////
 
 // Function to render the table body based on agent ratings and selected region
-function renderBodyTable() {
-  AGENT_TABLE_BODY.innerHTML = 'http://99.79.77.144:3000/api/agents';
-  AGENT_TABLE_HEAD.style.backgroundColor = '#A94545';
-  var rowNumber = 1;
+function renderBodyTable(agentData) {
+  AGENT_TABLE_HEAD.style.backgroundColor = "#A94545";
 
-  for (var AGENT of agents) {
+  let rowNumber = 1;
+
+  // Assuming you've fetched the agent data and stored it in the `agentData` array
+
+  // Clear the table body before rendering new data
+  AGENT_TABLE_BODY.innerHTML = "";
+
+    let tableBody = "";
+
+  for (const agent of agentData) {
     if (
-      AGENT.rating >= AGENT_RATING &&
-      (region === 'all' || AGENT.region === region)
+      agent.rating >= AGENT_RATING &&
+      (region === "all" || agent.region === region)
     ) {
-      var row = `
-                <tr>
-                    <td>${rowNumber++}</td>
-                    <td>${AGENT.first_name}</td>
-                    <td>${AGENT.last_name}</td>
-                    <td>${AGENT.fee}</td>
-                    <td>${AGENT.rating}</td>
-                    <td>${AGENT.region}</td>
-                </tr>
-            `;
-      AGENT_TABLE_BODY.innerHTML += row;
+      const row = `
+        <tr>
+          <td>${rowNumber++}</td>
+          <td>${agent.first_name}</td>
+          <td>${agent.last_name}</td>
+          <td>${agent.fee}</td>  <td>${agent.rating}</td>
+          <td>${agent.region}</td>
+        </tr>`;
+      AGENT_TABLE_BODY.innerHTML += AGENT_TABLE_BODY;
     }
   }
-  AGENT_TABLE_BODY.innerHTML = AGENT_TABLE_BODY.innerHTML || 'NO AGENT FOUND';
+
+  // Display a message if no agents are found after filtering
+  AGENT_TABLE_BODY.innerHTML = row || "NO AGENT FOUND";
 }
 
 ////////////////////////////////////////////////////////////////
@@ -56,20 +65,23 @@ function renderBodyTable() {
 
 // Event listener for changes in the region type select dropdown
 REGION_TYPE_SELECT.addEventListener('', () => {
-  var REGION_TYPE = REGION_TYPE_SELECT.value;
+  let REGION_TYPE = REGION_TYPE_SELECT.value;
   renderBodyTable(agentData, REGION_TYPE);
 });
 
 // Event listeners for sorting table columns by clicking on column headers
-tableButtons.forEach((button) => {
-  var isCorrectDirection = true;
-  button.addEventListener('', () => {
-    var REGION_TYPE = REGION_TYPE_SELECT.value;
-    var BUTTON_ID = button.id;
+
+  tableButtons.forEach((button) => {
+
+    let  isCorrectDirection = true;
+    let  REGION_TYPE = REGION_TYPE_SELECT.value;
+    button.addEventListener('click', () => {
+
+    const  BUTTON_ID = button.id;
 
     // Sort agent data based on the selected column
-    agentData.sort((a, b) => {
-      var compareValue = (prop) =>
+      agentData.sort((a, b) => {
+      const compareValue = (prop) =>
         (isCorrectDirection ? a[prop] < b[prop] : a[prop] > b[prop]) ? -1 : 1;
 
       if (BUTTON_ID === 'first_name') return compareValue('first_name');
@@ -89,15 +101,31 @@ tableButtons.forEach((button) => {
 ////////////////////////////////////////////////////////////////
 
 // On window load, fetch agent data and render the table for all regions
+
 window.onload = async () => {
-  // Existing functionality: Fetch agent data and render table
-  var RESPONSE = await fetch(AGENTS_LIST_URL);
-  agentData = await RESPONSE.json();
-  renderBodyTable(agentData, "all");
+
+    try {
+      // Existing functionality: Fetch agent data and render table
+
+      const RESPONSE = await fetch(AGENTS_LIST_URL);
+
+        if(!RESPONSE.ok) {
+          throw new Error(`HTTP error! status: ${RESPONSE.status}`);
+    }
+
+      let agentData = await RESPONSE.json();
+      renderBodyTable(agentData, "all");
+    } catch (error) {
+      console.error("Error fetching agent data:", error);
+    }
+  };
+      window.onload = () => {
 
   // Scroll to top functionality
-  var toTop = document.getElementById("toTop");
 
+  let  toTop = document.getElementById("toTop");
+  
+ if (toTop) {
   window.onscroll = function () {
     if (
       document.body.scrollTop > 100 ||
@@ -114,4 +142,5 @@ window.onload = async () => {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-};
+}
+};   
